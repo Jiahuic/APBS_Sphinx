@@ -57,11 +57,11 @@ def run_tabipb(molecules):
     # It would assist the user
     # with the meaning of the various values, as well as tracking, naming and
     # locating the configs the user has created.
-    solver = TABIPB_Solver(density=2.0, probe_radius=1.4, epsp=1.0,
+    solver = TABIPB_Solver(density=2.02, probe_radius=1.4, epsp=1.0,
              epsw=80.0, bulk_strength=1.5, order=3, maxparnode=500,
              theta=0.8, temp=300.00, mesh_flag=0)
 
-    result = solver.run_solv(molecules)
+    result = solver.run_solve(molecules)
 
     del solver
     return result
